@@ -15,28 +15,18 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
-    
-    
+
     <profiles>
-    <profile>
-    <id>Regression</id>
-    </profile>
-    
-    <profile>
-    <id>Purchase</id>
-    </profile>
-    
-     <profile>
-    <id>ErrorMessage</id>
-    </profile>
+        <profile>
+            <id>Regression</id>
+        </profile>
+        <profile>
+            <id>Purchase</id>
+        </profile>
+        <profile>
+            <id>ErrorMessage</id>
+        </profile>
     </profiles>
-
-
-
-
-
-
-
 
     <dependencies>
 
@@ -44,56 +34,50 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.39.0</version>
-        </dependency>
-        
-        <!-- Source: https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-java</artifactId>
-    <version>7.14.0</version>
-</dependency>
-
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-testng</artifactId>
-    <version>7.14.0</version>
-</dependency>
-
-        <!-- TestNG -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.11.0</version>
-            <scope>test</scope>
+            <version>4.17.0</version>
         </dependency>
 
-        <!-- WebDriverManager (Correct one) -->
+       
+
+        <!-- WebDriverManager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>5.7.0</version>
         </dependency>
-        
+
+        <!-- TestNG -->
         <dependency>
-    <groupId>com.aventstack</groupId>
-    <artifactId>extentreports</artifactId>
-    <version>5.0.9</version>
-</dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.8.0</version>
+            <scope>test</scope>
+        </dependency>
+        
+        
+
 
     </dependencies>
- 
+
     <build>
         <plugins>
+            <!-- Compiler plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
+                </configuration>
+            </plugin>
+
+            <!-- Surefire plugin to run TestNG tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.3.0</version>
+                <version>3.1.2</version>
                 <configuration>
-                <includes>
-<include>**/testngtestrunner.java</include>
-</includes>
-
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>

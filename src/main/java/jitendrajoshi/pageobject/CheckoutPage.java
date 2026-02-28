@@ -6,7 +6,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import rahulshettyacademy.AbstractComponents.AbstractComponent;
-import rahulshettyacademy.AbstractComponents.OrderPage;
 
 public class CheckoutPage extends AbstractComponent {
 
@@ -24,7 +23,7 @@ public class CheckoutPage extends AbstractComponent {
     @FindBy(css = ".action__submit")
     WebElement submit;
 
-    // 🔹 select country
+    // Select country
     public void selectCountry(String countryName) {
         country.sendKeys(countryName);
         driver.findElement(
@@ -32,24 +31,9 @@ public class CheckoutPage extends AbstractComponent {
         ).click();
     }
 
-    // 🔹 submit order
+    // Submit order
     public ConfirmationPage submitOrder() {
         submit.click();
         return new ConfirmationPage(driver);
     }
-
-	public static void click() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public static boolean verifyProductDisplay(String productName) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	public static OrderPage goToCheckout() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

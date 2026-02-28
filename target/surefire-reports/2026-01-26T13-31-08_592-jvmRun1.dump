@@ -1,6 +1,6 @@
-# Created at 2026-01-21T11:51:05.558
+# Created at 2026-01-26T13:31:20.074
 java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "ts" is null
-	at rahulshttyacademy.testcomponent.basetest.getScreenshot(basetest.java:35)
+	at rahulshttyacademy.testcomponent.basetest.getScreenshot(basetest.java:68)
 	at rahulshttyacademy.testcomponent.Listeners.onTestFailure(Listeners.java:50)
 	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:115)
 	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:285)

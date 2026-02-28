@@ -54,6 +54,16 @@ public class Landingpage extends  AbstractComponent {
 
 	}
 
+	public static void incrementQuantity(int int1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void addToCart() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 	
 	

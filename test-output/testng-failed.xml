@@ -3,13 +3,23 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+      <class name="jitendrajoshi.ErrorMessage">
+        <methods>
+          <include name="Loginvalidation"/>
+        </methods>
+      </class> <!-- jitendrajoshi.ErrorMessage -->
       <class name="cucumber.testngtestrunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="1"/>
           <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="1"/>
         </methods>
       </class> <!-- cucumber.testngtestrunner -->
+      <class name="jitendrajoshi.SubmitOrderTest">
+        <methods>
+          <include name="submitOrder" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- jitendrajoshi.SubmitOrderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
